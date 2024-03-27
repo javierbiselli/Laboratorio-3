@@ -1,4 +1,4 @@
-const Pelicula = ({ test }) => {
+const Pelicula = () => {
   let watchList = [
     {
       Title: "Inception",
@@ -134,8 +134,8 @@ const Pelicula = ({ test }) => {
 
   return (
     <div>
-      {titlesArray.map((title) => (
-        <p>{title}</p>
+      {titlesArray.map((title, i) => (
+        <p key={i}>{title}</p>
       ))}
     </div>
   );

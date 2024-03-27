@@ -2,7 +2,7 @@ import "./App.css";
 import Pelicula from "./components/Pelicula";
 
 function App() {
-  return <Pelicula test={"testtt"}></Pelicula>;
+  return <Pelicula />;
 }
 
 export default App;
