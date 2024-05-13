@@ -1,14 +1,20 @@
+import { useState } from "react";
 import "./App.css";
-import Table from "./components/Table";
+import Lista from "./components/Lista/Lista";
+import AgregarItem from "./components/AgregarItem/AgregarItem";
 
 function App() {
-  const netIncomes = [
-    { brand: "McDonalds", income: 1291283 },
-    { brand: "Burger King", income: 1927361 },
-    { brand: "KFC", income: 1098463 },
-  ];
+  const [lista, setLista] = useState([
+    { tarea: "test tarea", id: 1, completada: false },
+    { tarea: "test tarea123123", id: 2, completada: true },
+  ]);
 
-  return <Table netIncomes={netIncomes} />;
+  return (
+    <div className="p-4">
+      <Lista lista={lista} setLista={setLista} />
+      <AgregarItem lista={lista} setLista={setLista} />
+    </div>
+  );
 }
 
 export default App;
